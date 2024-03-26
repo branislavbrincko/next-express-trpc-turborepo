@@ -9,18 +9,24 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.28.8",
+    "@trpc/client": "^11.0.0-next.320",
+    "@trpc/next": "^11.0.0-next.320",
+    "@trpc/react-query": "^11.0.0-next.320",
+    "api": "*",
     "next": "^14.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.1",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "typescript": "^5.3.3"
   }
 }
