@@ -18,7 +18,6 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package ma
 
 - `@repo/web`: a [Next.js](https://nextjs.org/) app
 - `@repo/api`: an [Express](https://expressjs.com/) server
-- `@repo/ui`: ui: a React component library
 - `@repo/eslint-config-custom`: `eslint` configurations for client side applications (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/eslint-config-custom-server`: `eslint` configurations for server side applications (includes `eslint-config-next` and `eslint-config-prettier`)
 - `scripts`: Jest configurations
