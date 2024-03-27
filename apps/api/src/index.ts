@@ -22,27 +22,20 @@ const publicProcedure = t.procedure
  */
 
 const appRouter = router({
-    user: {
-        list: publicProcedure.query(async () => {
-            const users = await db.user.findMany()
-            return users
-        }),
-        byId: publicProcedure.input(z.number()).query(async (opts) => {
-            const { input } = opts
-            const user = await db.user.findById(input)
-            return user
-        }),
-        create: publicProcedure.input(z.object({ name: z.string().min(1) })).mutation(async (opts) => {
-            const { input } = opts
-            const user = await db.user.create(input)
-            return user
-        }),
-        delete: publicProcedure.input(z.number()).mutation(async (opts) => {
-            const { input } = opts
-            await db.user.deleteById(input)
-            return null
-        }),
-    },
+    userList: publicProcedure.query(async () => {
+        const users = await db.user.findMany()
+        return users
+    }),
+    createUser: publicProcedure.input(z.object({ name: z.string().min(1) })).mutation(async (opts) => {
+        const { input } = opts
+        const user = await db.user.create(input)
+        return user
+    }),
+    deleteUser: publicProcedure.input(z.number()).mutation(async (opts) => {
+        const { input } = opts
+        await db.user.deleteById(input)
+        return null
+    }),
 })
 
 // Export type router type signature, this is used by the client.

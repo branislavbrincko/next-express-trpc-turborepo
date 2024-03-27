@@ -10,24 +10,26 @@ export default function Home() {
     Queries
     */
 
-    const { data: users, isLoading, isError } = trpc.user.list.useQuery()
+    // const { data: users, isLoading, isError } = trpc.user.list.useQuery()
+    const { data: users, isLoading, isError } = trpc.userList.useQuery()
 
     /* 
     Mutations
     */
 
-    const createUser = trpc.user.create.useMutation({
+    const createUser = trpc.createUser.useMutation({
         onSuccess() {
             setName('')
-            utils.user.list.invalidate()
+            // utils.user.list.invalidate()
+            utils.userList.invalidate()
         },
         onError(error) {
             console.log(error)
         },
     })
-    const deleteUser = trpc.user.delete.useMutation({
+    const deleteUser = trpc.deleteUser.useMutation({
         onSuccess() {
-            utils.user.list.invalidate()
+            utils.userList.invalidate()
         },
         onError(error) {
             console.log(error)
