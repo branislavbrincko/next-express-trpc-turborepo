@@ -2,7 +2,9 @@ import { httpBatchLink } from '@trpc/client'
 import { createTRPCNext } from '@trpc/next'
 import { AppRouter } from 'api'
 
-export const trpc = createTRPCNext<AppRouter>({
+type Trpc = ReturnType<typeof createTRPCNext<AppRouter>>
+
+export const trpc: Trpc = createTRPCNext<AppRouter>({
     config() {
         return {
             links: [
