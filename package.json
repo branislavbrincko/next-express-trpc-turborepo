@@ -1,27 +1,23 @@
 {
-  "name": "with-docker",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "clean": "turbo run clean",
-    "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "lint": "turbo run lint"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@repo/eslint-config": "*",
-    "prettier": "^3.2.5",
-    "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=7.0.0"
-  },
-  "packageManager": "npm@9.8.1",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+    "name": "with-docker",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "build": "turbo run build",
+        "clean": "turbo run clean",
+        "dev": "turbo run dev",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "lint": "turbo run lint"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@repo/eslint-config": "*",
+        "prettier": "^3.2.5",
+        "turbo": "latest"
+    },
+    "engines": {
+        "node": ">=14.0.0",
+        "npm": ">=7.0.0"
+    },
+    "packageManager": "pnpm@8.9.0"
 }
