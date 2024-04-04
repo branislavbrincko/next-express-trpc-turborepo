@@ -10,7 +10,6 @@ export default function Home() {
     Queries
     */
 
-    // const { data: users, isLoading, isError } = trpc.user.list.useQuery()
     const { data: users, isLoading, isError } = trpc.userList.useQuery()
 
     /* 
@@ -20,7 +19,6 @@ export default function Home() {
     const createUser = trpc.createUser.useMutation({
         onSuccess() {
             setName('')
-            // utils.user.list.invalidate()
             utils.userList.invalidate()
         },
         onError(error) {
